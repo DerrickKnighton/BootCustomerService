@@ -45,5 +45,9 @@ public class CustomerController {
 		return customerRepository.save(customer);
 	}
 	
+	@RequestMapping(value = "/GetAllCustomers", method = RequestMethod.GET)
+	public List<Customer> GetAllCustomers() {	
+		return customerRepository.findAll();
+	}
 	
 }
